@@ -49,6 +49,7 @@ window.onload = () => {
 
     typeWriter();
 
+    /*
 
 
     const projectOneText = document.getElementById("projectOneText");
@@ -154,6 +155,7 @@ window.onload = () => {
 
     }
 
+    */
 
 
 }
