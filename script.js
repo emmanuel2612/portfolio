@@ -1,40 +1,52 @@
 window.onload = () => {
 
-    var body = document.body;
-    var html = document.documentElement;
+    const menuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuContent = document.getElementById("menu-content");
+    const close = document.getElementById("close");
+    
 
 
-    /* SHOW CONTACT */
+   
+    menuButton.onclick = () => {
 
-    var contactButton = document.getElementById("contact-button");
-    var contactBox = document.getElementById("contact");
+    setTimeout(() => {
+        mobileMenu.style.height = "100vh";
+    }, 100);
+
+    setTimeout(() => {
+        menuContent.style.display = "flex";
+    }, 200);
+    
+       mobileMenu.style.display = "block";
+
+}
+
+ close.onclick = () => {
+   
+
+   mobileMenu.style.height = "0vh";
+
+   setTimeout(() => {
+    mobileMenu.style.display = "none"
+}, 300);
+
+setTimeout(() => {
+    menuContent.style.display = "none"
+}, 100);
+
+ }
+
+    
 
 
 
 
-    contactButton.onclick = () => {
-
-        contactBox.style.display = "flex";
-
-        setTimeout(function () {
-            contactBox.style.transform = "translate(0%)";
-        }, 50);
-
-
-    }
-
-    if (html.scrollTop < 1050) {
-        contactBox.style.transform = "translate(-100%)";
-        contactBox.style.display = "none";
-    }
-
-
-
-    // Type Effect 
+    /* Type Effect 
 
     var i = 0;
-    var txt = 'Visualiser. Executer. Developer.'; /* The text */
-    var speed = 100; /* The speed/duration of the effect in milliseconds */
+    var txt = 'Visualiser. Executer. Developer.'; // The text 
+    var speed = 100; // The speed/duration of the effect in milliseconds 
 
     function typeWriter() {
         if (i < txt.length) {
@@ -47,115 +59,13 @@ window.onload = () => {
         }
     }
 
-    typeWriter();
-
-    /*
+    typeWriter(); */
 
 
-    const projectOneText = document.getElementById("projectOneText");
-    const projectTwoText = document.getElementById("projectTwoText");
-    const projectThreeText = document.getElementById("projectThreeText");
-    const projectFourText = document.getElementById("projectFourText");
-    const projectFiveText = document.getElementById("projectFiveText");
 
 
-    if (window.innerWidth > 930) {
 
-
-        projectOneText.onmouseover = () => {
-
-            setTimeout(() => {
-                projectOneText.style.width = "100%";
-
-            }, 50);
     
-        }
-
-        projectOneText.onmouseout = () => {
-
-            setTimeout(() => {
-                projectOneText.style.width = "30%";
-            }, 50);
-
-        }
-
-        projectTwoText.onmouseover = () => {
-
-            setTimeout(() => {
-                projectTwoText.style.width = "100%";
-
-            }, 50);
-
-
-        }
-
-        projectTwoText.onmouseout = () => {
-
-            setTimeout(() => {
-                projectTwoText.style.width = "30%";
-            }, 50);
-
-        }
-
-        projectThreeText.onmouseover = () => {
-
-            setTimeout(() => {
-                projectThreeText.style.width = "100%";
-
-            }, 50);
-
-
-        }
-
-        projectThreeText.onmouseout = () => {
-
-            setTimeout(() => {
-                projectThreeText.style.width = "30%";
-            }, 50);
-
-        }
-
-
-        projectFourText.onmouseover = () => {
-
-            setTimeout(() => {
-                projectFourText.style.width = "100%";
-
-            }, 50);
-
-
-        }
-
-        projectFourText.onmouseout = () => {
-
-            setTimeout(() => {
-                projectFourText.style.width = "30%";
-            }, 50);
-
-        }
-
-        projectFiveText.onmouseover = () => {
-
-            setTimeout(() => {
-                projectFiveText.style.width = "100%";
-
-            }, 50);
-
-
-        }
-
-        projectFiveText.onmouseout = () => {
-
-            setTimeout(() => {
-                projectFiveText.style.width = "30%";
-            }, 50);
-
-        }
-
-
-    }
-
-    */
-
+    
 
 }
